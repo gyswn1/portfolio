@@ -33,12 +33,11 @@
 
     <script>
       const portfolioCount = 2;
-      const portfolioVersion = "7990f05";
       const portfolio = document.getElementById("portfolio");
 
       for (let number = 1; number <= portfolioCount; number += 1) {
         const image = document.createElement("img");
-        image.src = `portfolio${number}.png?v=${portfolioVersion}`;
+        image.src = `portfolio${number}.png`;
         image.alt = `포트폴리오 ${number}`;
         image.decoding = "async";
         portfolio.appendChild(image);
