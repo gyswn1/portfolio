@@ -34,6 +34,7 @@
     <script>
       const portfolioCount = 2;
       const portfolio = document.getElementById("portfolio");
+      portfolio.replaceChildren();
 
       for (let number = 1; number <= portfolioCount; number += 1) {
         const image = document.createElement("img");
