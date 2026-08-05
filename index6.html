@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .portfolio {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <main id="portfolio" class="portfolio"></main>
+
+  <script>
+    const portfolioCount = 10;
+    const portfolio = document.getElementById("portfolio");
+    portfolio.replaceChildren();
+
+    for (let number = 9; number <= portfolioCount; number += 1) {
+      const image = document.createElement("img");
+      image.src = `portfolio${number}.png`;
+      image.alt = `포트폴리오 ${number}`;
+      image.decoding = "async";
+      portfolio.appendChild(image);
+    }
+  </script>
+</body>
+</html>
